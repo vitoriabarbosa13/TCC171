@@ -1,4 +1,9 @@
-<!doctype html>
+<?php 
+    if(!isset($_SESSION)){
+     session_start();
+    }
+?>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -30,7 +35,7 @@
       <div class="container">
     
         <!-- Navbar brand (mobile) -->
-        <a class="navbar-brand d-lg-none" href="./index.html">Angels Pesca</a>
+        <a class="navbar-brand d-lg-none" href="./index.php">Angels Pesca</a>
     
         <!-- Navbar toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,12 +54,12 @@
               <a class="nav-link " href="./menu.html">Menu</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./reservation.html">Reservas</a>
+              <a class="nav-link active" href="./reservation.php">Reservas</a>
             </li>
           </ul>
     
           <!-- Navbar brand -->
-          <a class="navbar-brand d-none d-lg-flex mx-lg-auto" href="./index.html">
+          <a class="navbar-brand d-none d-lg-flex mx-lg-auto" href="./index.php">
             Angels Pesca
           </a>
     
@@ -114,7 +119,7 @@
           <div class="col-lg-8">
 
             <!-- Form -->
-            <form id="reservationForm">
+            <form id="reservationForm" action="receberes.php" method="POST">
               <div class="row gx-3">
                 <div class="col-md-6">
 
@@ -124,19 +129,19 @@
                   <!-- Full name -->
                   <div class="mb-3">
                     <label class="visually-hidden" for="user_name">Nome Completo</label>
-                    <input class="form-control" id="user_name" name="user_name" type="text" placeholder="Nome Completo" required>
+                    <input class="form-control" id="user_name" name="nome_reserva" type="text" placeholder="Nome Completo" required>
                   </div>
 
                   <!-- Phone number -->
                   <div class="mb-3">
                     <label class="visually-hidden" for="user_phone">Telefone</label>
-                    <input class="form-control" id="user_phone" name="user_phone" type="tel" placeholder="Telefone" required>
+                    <input class="form-control" id="user_phone" name="tel_res" type="text" placeholder="Telefone" required>
                   </div>
 
                   <!-- Email address -->
                   <div class="mb-3">
                     <label class="visually-hidden" for="user_email">E-mail</label>
-                    <input class="form-control" id="user_email" name="user_email" type="email" placeholder="E-mail" required>
+                    <input class="form-control" id="user_email" name="email_res" type="email" placeholder="E-mail" required>
                   </div>
 
                 </div>
@@ -157,24 +162,29 @@
                   <!-- Date -->
                   <div class="mb-3">
                     <label class="visually-hidden" for="date">Data</label>
-                    <input class="form-control" id="date" name="date" type="date" value="2021-12-14" required>
+                    <input class="form-control" id="date" name="data_res" type="date" required>
                   </div>
 
                   <!-- Time -->
                   <div class="mb-3">
                     <label class="visually-hidden" for="time">Horário</label>
-                    <input class="form-control" id="time" name="time" type="time" value="10:00" required>
-                  </div>
-
+                    <select class="form-select" id="horario" name="horario" required>
+                      <option value="1">10:00</option>
+                      <option value="2" selected="">11:00</option>
+                      <option value="3">12:00</option>
+                      <option value="4">13:00</option>
+                      <option value="5">14:00</option>
+                      <option value="6">15:00</option>
+                      <option value="7">19:00</option>
+                      <option value="8">20:00</option>
+                      <option value="9">21:00</option>
+                      <option value="10">22:00</option>
+                      <option value="11">23:00</option>
+                    </div>
+                    
                 </div>
                 <div class="col text-center">
-
-                  <!-- Button -->
-                  <button class="btn btn-outline-primary" type="submit">
-                    <a class="nav-link active" href="./confirmacao.html">
-                    Confirme a reserva </a>
-                  </button>
-
+                <input class="form-control" type="submit" value="RESERVAR">
                 </div>
               </div>
             </form>

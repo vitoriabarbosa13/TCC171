@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                background-color: #0dcaf0;
+                display: flex;
+                font-family: Poppins;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+    
+                border: 0;
+            }
+    
+            .container {
+                background-color: #ffffff;
+                border-radius: 5px;
+                width: 450px;
+                max-width: 100%;
+            }
+    
+            .header {
+                padding: 30px 40px;
+            }
+    
+            .header h2 {
+                font-weight: 600;
+                color: #000000;
+                font-size: 30px;
+            }
+    
+            .form {
+                padding: 0 40px 30px;
+            }
+    
+            .form-control {
+                margin-bottom: 10px;
+                padding-bottom: 20px;
+                position: relative;
+            }
+            
+    
+            .form-control label {
+                display: inline-block;
+                margin-bottom: 5px;
+                color: #440f60;
+            }
+    
+            .form-control input {
+                border: 2px solid #3E445B;
+                border-radius: 5px;
+                outline: 0;
+    
+                display: block;
+    
+                font-size: 14px;
+    
+                width: 100%;
+                padding: 15px;
+            }
+    
+            .form-control.success input {
+                border: 3px solid #4ECA64;
+            }
+    
+            .form-control.error input {
+                border: 3px solid #DB5A5A;
+            }
+    
+            .form-control.error i.img-error {
+                visibility: visible;
+            }
+    
+            .form-control.error small {
+                color: #DB5A5A;
+                visibility: visible;
+            }
+    
+            .form-control small {
+                position: absolute;
+                margin-top: 5px;
+                font-size: 14px;
+                color:#DB5A5A;
+    
+            }
+    
+            .form button {
+                background-color: #1145ff;
+                border-radius: 5px;
+                color: #fff;
+                padding: 15px;
+                font-size: 15px;
+                font-weight: 600;
+                width: 100%;
+    
+                margin-top: 5px;
+    
+                cursor: pointer;
+            }
+    
+            .form button:hover {
+                background-color: #584ff5;
+                transition: 0.3s;
+            }
+    
+            .form-control.success input {
+                border: 3px solid #4ECA64
+            }
+    
+            .form-control.error input{
+            border: 3px solid #DB5A5A;
+            }
+    
+            .form-control.error small{
+                visibility: visible;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>
+                    Cadastro
+                </h2>
+            </div>
+            <form class="form" id="form">
+                <div class="form-control">
+                    <form name="cadastro" action="recebe.php" method="post">    
+                        Nome:
+                            <input type="text" name="nome" required>
+                </div>
+                <div class="form-control">
+                     
+        Data de nascimento: 
+        <input type="date" name="data_nasc" required>
+                </div>
+                <div class="form-control">
+                    
+        CPF:
+        <input type="text" name="cpf" required>
+                </div>
+                <div class="form-control">
+                    Endereço:
+            <input type="text" name="endereco" required>
+                </div>
+                <div class="form-control">
+                    Telefone: 
+                    <input type="text" name="tel" required>
+                </div>
+                <div class="form-control">
+                    Email: 
+            <input type="email" name="email" required>
+                </div>
+                <div class="form-control">
+                    Usuário:
+            <input type="text" name="usu" required>
+
+                </div>
+                <div class="form-control">
+                    Senha:
+            <input type="password" name="senha" required> 
+                </div>
+                <div class="form-control">
+            <input name="enviar" type="submit" value="CADASTRAR">
+            <br>
+            <br>
+            <input name="cancelar" type="reset" value="LIMPAR">
+        </div>
+            </form>
+        </div>
+
+    </body>
+
+</html>
