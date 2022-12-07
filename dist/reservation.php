@@ -74,6 +74,9 @@
             <li class="nav-item">
               <a class="nav-link " href="./contact-us.html">Contate-nos</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./login.php">Sign Out</a>
+            </li>
           </ul>
     
         </div>
@@ -106,7 +109,7 @@
 
             <!-- Heading -->
             <h2 class="mb-2">
-              Reserve sua mesa online
+              Reserve sua mesa conosco
             </h2>
 
             <!-- Subheading -->
@@ -184,7 +187,7 @@
                     
                 </div>
                 <div class="col text-center">
-                <input class="form-control" type="submit" value="RESERVAR">
+                <input class="form-control" type="submit" value="Reservar">
                 </div>
               </div>
             </form>
